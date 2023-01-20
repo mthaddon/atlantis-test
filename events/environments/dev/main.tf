@@ -14,4 +14,8 @@ resource "juju_application" "indico" {
   charm {
     name = "indico"
   }
+
+  config = {
+    site_url = "test-site"
+  }
 }
