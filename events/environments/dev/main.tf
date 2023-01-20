@@ -8,8 +8,8 @@ terraform {
 }
 
 resource "juju_application" "indico" {
-  name  = indico
-  model = indico-test
+  name  = "indico"
+  model = "indico-test"
 
   charm {
     name = "indico"
