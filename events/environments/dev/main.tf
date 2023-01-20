@@ -23,6 +23,6 @@ resource "juju_application" "indico" {
   }
 
   config = {
-    site_url = "test-site"
+    site_url = "test-site.internal"
   }
 }
