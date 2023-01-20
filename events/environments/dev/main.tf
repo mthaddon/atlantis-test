@@ -7,9 +7,16 @@ terraform {
   }
 }
 
+provider "juju" {}
+
+resource "juju_model" "indico_test" {
+  name = "indico-test"
+}
+
+
 resource "juju_application" "indico" {
   name  = "indico"
-  model = "indico-test"
+  model = juju_model.indico_test.name
 
   charm {
     name = "indico"
